@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cardapio {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #f36c2a;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #f36c2a;
+    margin-bottom: 5px;
+}
+
+.linha {
+    height: 2px;
+    background-color: #f36c2a;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.colunas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.coluna {
+    flex: 1 1 45%;
+    max-width: 48%; /* Garante que elas fiquem lado a lado no desktop */
+    min-width: 280px; /* Nunca ficará menor que isso */
+    border: 2px solid #f36c2a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.coluna:hover {
+    transform: scale(1.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td {
+    padding: 8px 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+.preco {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+.preco-cento {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f36c2a;
+    margin-top: 15px;
+}
+
+.obs {
+    font-weight: bold;
+    color: #f36c2a;
+    margin: 25px auto 0 auto;
+    border: 2px solid #f36c2a;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 400px;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    margin-top: 30px;
+    width: 300px;
+    height: auto;
+}
+
+.whats {
+    margin-top: 15px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.whats a {
+    text-decoration: none;
+    color: #25d366;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.whats img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Responsividade total para qualquer celular */
+@media (max-width: 600px) {
+    .colunas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna {
+        max-width: 90%;
+    }
+
+    .whats {
+        flex-direction: column;
+        font-size: 32px;
+    }
+
+    .whats img {
+        width: 70px;
+        height: 70px;
+    }
+}
